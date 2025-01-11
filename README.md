@@ -1,4 +1,4 @@
-# Craft Anywhere Redux	
+# CraftAnywhere Redux	
 This is a mod for The Long Dark by Hinterland Studio, Inc.
 
 ## Description
@@ -16,3 +16,8 @@ The Long Dark Modding Server (Discord)
 
 # Extra Special Thanks
 Cass (Original Mod Author)
+
+
+### Buy Me a Coffee
+If you enjoy using this mod, feel free to buy me a cup of coffee.  Thank you!
+https://ko-fi.com/moosemeat817
