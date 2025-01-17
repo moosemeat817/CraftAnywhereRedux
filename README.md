@@ -19,6 +19,6 @@ Cass (Original Mod Author)
 
 # 
 
-#### Buy Me a Coffee
+####
 If you enjoy using this mod, feel free to buy me a cup of coffee.  Thank you!
 https://ko-fi.com/moosemeat817
