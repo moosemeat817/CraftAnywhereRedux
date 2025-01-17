@@ -11,14 +11,14 @@ Allows you to adjust the crafting location for vanilla craftable items.
 Select crafting location by item in Mod Settings.
 
 
-# Special Thanks
+## Special Thanks
 The Long Dark Modding Server (Discord)
 
-# Extra Special Thanks
+## Extra Special Thanks
 Cass (Original Mod Author)
 
-# 
 
-####
+
+##
 If you enjoy using this mod, feel free to buy me a cup of coffee.  Thank you!
 https://ko-fi.com/moosemeat817
