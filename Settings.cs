@@ -40,7 +40,7 @@ namespace CraftAnywhereRedux
         [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
         public int bulletLocationIndex = 3;
 
-        [Name("     Bullet")]
+        [Name("     Bushcraft Bow")]
         [Description("The default location is at the Ammo Workbench.")]
         [Choice("Anywhere", "Workbench")]
         public int bushcraftbowLocationIndex = 1;
@@ -158,10 +158,6 @@ namespace CraftAnywhereRedux
         [Choice("Anywhere", "Workbench")]
         public int bearskincoatLocationIndex = 1;
 
-        [Name("     Cougar Wrap")]
-        [Description("The default location is at the Workbench.")]
-        [Choice("Anywhere", "Workbench")]
-        public int cougarwrapLocationIndex = 1;
 
         [Name("     Deerskin Boots")]
         [Description("The default location is at the Workbench.")]
@@ -216,6 +212,91 @@ namespace CraftAnywhereRedux
 
 
 
+
+        // ----------------------------------------------------------------------------------
+        // MODS
+        // ----------------------------------------------------------------------------------
+
+
+        // Wolfscarf
+        [Name("Show Wolfscarf")]
+        //[Description("Clothing")]
+        public bool wolfscarf_enabled = false;
+
+
+        [Name("     Wolfskin Scarf")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int wolfscarfLocationIndex = 1;
+
+
+
+        // Leatherworks
+        [Name("Show Leatherworks")]
+        //[Description("Clothing")]
+        public bool leatherworks_enabled = false;
+
+
+        [Name("     Flight Jacket")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int jacketleatherLocationIndex = 1;
+
+        [Name("     Improved Down")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int improveddownLocationIndex = 1;
+
+        [Name("     Improved Flight Jacket")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int improvedjacketleatherLocationIndex = 1;
+
+        [Name("     Improved Longjohns")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int improvedlongjohnsLocationIndex = 1;
+
+        [Name("     Improvised Flask")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int improvisedflaskLocationIndex = 1;
+
+
+
+        // Northfolk
+        [Name("Show Northfolk Clothing")]
+        //[Description("Clothing")]
+        public bool northfolk_enabled = false;
+
+
+        [Name("     Bearskin Leggings")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int bearskinleggingsLocationIndex = 1;
+
+        [Name("     Deerskin Gloves")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int deerskincoatLocationIndex = 1;
+
+        [Name("     Deerskin Gloves")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int deerskinglovesLocationIndex = 1;
+
+        [Name("     Wolfskin Boots")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int wolfskinbootsLocationIndex = 1;
+
+        [Name("     Wolfskin Cap")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int wolfskincapLocationIndex = 1;
+
+
+
         protected void SetToolsVisibility(bool visible)
         {
             this.SetFieldVisible(GetType().GetField("arrowshaftLocationIndex"), visible);
@@ -248,7 +329,6 @@ namespace CraftAnywhereRedux
         protected void SetClothingVisibility(bool visible)
         {
             this.SetFieldVisible(GetType().GetField("bearskincoatLocationIndex"), visible);
-            this.SetFieldVisible(GetType().GetField("cougarwrapLocationIndex"), visible);
             this.SetFieldVisible(GetType().GetField("deerskinbootsLocationIndex"), visible);
             this.SetFieldVisible(GetType().GetField("deerskinpantsLocationIndex"), visible);
             this.SetFieldVisible(GetType().GetField("improvisedcramponsLocationIndex"), visible);
@@ -259,12 +339,40 @@ namespace CraftAnywhereRedux
             this.SetFieldVisible(GetType().GetField("wolfskincoatLocationIndex"), visible);
             this.SetFieldVisible(GetType().GetField("wolfskinhatLocationIndex"), visible);
             this.SetFieldVisible(GetType().GetField("wolfskinpantsLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("wolfscarfLocationIndex"), visible);
+        }
+
+        protected void SetWolfscarfVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("wolfscarfLocationIndex"), visible);
+        }
+
+
+        protected void SetLeatherworksVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("jacketleatherLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("improveddownLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("improvedjacketleatherLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("improvedlongjohnsLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("improvisedflaskLocationIndex"), visible);
+        }
+
+        protected void SetNorthfolkVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("bearskinleggingsLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("deerskincoatLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("deerskinglovesLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("wolfskinbootsLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("wolfskincapLocationIndex"), visible);
         }
 
         internal void UpdateVisibility()
         {
             SetToolsVisibility(tools_enabled);
             SetClothingVisibility(clothing_enabled);
+            SetWolfscarfVisibility(wolfscarf_enabled);
+            SetLeatherworksVisibility(leatherworks_enabled);
+            SetNorthfolkVisibility(northfolk_enabled);
         }
 
 
@@ -275,6 +383,9 @@ namespace CraftAnywhereRedux
             base.OnChange(field, oldValue, newValue);
             if (field.Name == "tools_enabled") SetToolsVisibility((bool)newValue);
             else if (field.Name == "clothing_enabled") SetClothingVisibility((bool)newValue);
+            else if (field.Name == "wolfscarf_enabled") SetWolfscarfVisibility((bool)newValue);
+            else if (field.Name == "leatherworks_enabled") SetLeatherworksVisibility((bool)newValue);
+            else if (field.Name == "northfolk_enabled") SetNorthfolkVisibility((bool)newValue);
 
         }
 

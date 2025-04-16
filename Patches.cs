@@ -129,10 +129,6 @@ namespace CraftAnywhereRedux
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.bearskincoatLocationIndex;
                     }
-                    else if (name == "CougarWrap")
-                    {
-                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.cougarwrapLocationIndex;
-                    }
                     else if (name == "DeerSkinBoots")
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.deerskinbootsLocationIndex;
@@ -173,6 +169,63 @@ namespace CraftAnywhereRedux
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.wolfskinpantsLocationIndex;
                     }
+
+
+                    // ----------------------------------------------------------------------------------
+                    // MODS
+                    // ----------------------------------------------------------------------------------
+
+                    // Wolfscarf
+                    else if (name == "WolfScarf")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.wolfscarfLocationIndex;
+                    }
+
+                    // Leatherworks
+                    else if (name == "JacketLeatherFlightA")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.jacketleatherLocationIndex;
+                    }
+                    else if (name == "ImprovedDownInsulation")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.improveddownLocationIndex;
+                    }
+                    else if (name == "ImprovedJacketLeather")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.improvedjacketleatherLocationIndex;
+                    }
+                    else if (name == "ImprovedLongJohns")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.improvedlongjohnsLocationIndex;
+                    }
+                    else if (name == "ImprovisedFlask")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.improvisedflaskLocationIndex;
+                    }
+
+
+                    // Northfolk
+                    else if (name == "BearskinLeggings")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.bearskinleggingsLocationIndex;
+                    }
+                    else if (name == "DeerskinCoat")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.deerskincoatLocationIndex;
+                    }
+                    else if (name == "DeerskinGloves")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.deerskinglovesLocationIndex;
+                    }
+                    else if (name == "WolfskinBoots")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.wolfskinbootsLocationIndex;
+                    }
+                    else if (name == "WolfskinCap")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.wolfskincapLocationIndex;
+                    }
+
 
                 }
 

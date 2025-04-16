@@ -99,6 +99,13 @@
         <Reference Include="UnityEngine.Il2CppImageConversionManager" />
     </ItemGroup>
 	
+	
+	<ItemGroup>
+		<Reference Include="ComplexLogger">
+			<HintPath>$(TheLongDarkPath)\Mods\ComplexLogger.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	
 	<!-- This is a build event. It will copy your dll to the currently defined TheLongDarkPath's Mods folder -->
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<!-- This copies the mods files to the games mod dir -->
