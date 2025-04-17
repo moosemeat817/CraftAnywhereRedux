@@ -2,7 +2,9 @@
 This is a mod for The Long Dark by Hinterland Studio, Inc.
 
 ## Description
-Allows you to adjust the crafting location for vanilla and modded craftable items.
+Allows you to adjust the crafting location for vanilla and modded craftable items.  
+
+Included mods: Wolfscarf, Northfolk Clothing, Leatherworks, Ammo Tools, Cannery Manufacturing, Dead Air and Useful Blueprints.
 
 <img src="https://github.com/moosemeat817/images/blob/main/CraftAnywhereReduxMenu.png" width="80%">
 
