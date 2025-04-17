@@ -227,6 +227,86 @@ namespace CraftAnywhereRedux
                     }
 
 
+
+                    // Ammo Tools
+                    else if (name == "EmptyShellCasing")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.emptyshellcasingLocationIndex;
+                    }
+                    else if (name == "FlareGunAmmoSingle")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.flaregunammosingleLocationIndex;
+                    }
+                    else if (name == "Magnesium")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.magnesiumLocationIndex;
+                    }
+                    else if (name == "RifleCleaningKit")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.riflecleaningkitLocationIndex;
+                    }
+
+
+                    // Cannery Manufacturing
+                    else if (name == "CookingPot")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.cookingpotLocationIndex;
+                    }
+                    else if (name == "Firelog")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.firelogLocationIndex;
+                    }
+                    else if (name == "Hatchet")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.hatchetLocationIndex;
+                    }
+                    else if (name == "Knife")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.knifeLocationIndex;
+                    }
+                    else if (name == "ScrapMetal")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.scrapmetalLocationIndex;
+                    }
+
+
+
+                    // Dead Air
+                    else if (name == "ImprovisedFilter")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.improvisedfilterLocationIndex;
+                    }
+
+
+
+                    // Useful Blueprints
+                    else if (name == "WoodMatches")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.woodmatchesLocationIndex;
+                    }
+                    else if (name == "SewingKit")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.sewingkitLocationIndex;
+                    }
+                    else if (name == "Bow_Woodwrights")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.bowwoodwrightsLocationIndex;
+                    }
+                    else if (name == "Rope")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.ropeLocationIndex;
+                    }
+                    else if (name == "SaltBag")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.saltbagLocationIndex;
+                    }
+                    else if (name == "SharpeningStone")
+                    {
+                        bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.sharpeningstoneLocationIndex;
+                    }
+
+
+
                 }
 
                 //__instance.RefreshAvailableBlueprints();

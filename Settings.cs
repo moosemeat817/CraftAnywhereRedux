@@ -259,7 +259,7 @@ namespace CraftAnywhereRedux
 
         [Name("     Improvised Flask")]
         [Description("The default location is at the Workbench.")]
-        [Choice("Anywhere", "Workbench")]
+        [Choice("Anywhere", "Workbench", "Forge")]
         public int improvisedflaskLocationIndex = 1;
 
 
@@ -294,6 +294,117 @@ namespace CraftAnywhereRedux
         [Description("The default location is at the Workbench.")]
         [Choice("Anywhere", "Workbench")]
         public int wolfskincapLocationIndex = 1;
+
+
+
+
+        // Ammo Tools
+        [Name("Show Ammo Tools")]
+        //[Description("Clothing")]
+        public bool ammotools_enabled = false;
+
+
+        [Name("     Empty Shell Casing")]
+        [Description("The default location is at the Ammo Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int emptyshellcasingLocationIndex = 3;
+
+        [Name("     Flare Gun Ammo")]
+        [Description("The default location is at the Ammo Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int flaregunammosingleLocationIndex = 3;
+
+        [Name("     Magnesium")]
+        [Description("The default location is at the Ammo Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int magnesiumLocationIndex = 3;
+
+        [Name("     Rifle Cleaning Kit")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int riflecleaningkitLocationIndex = 1;
+
+
+
+        // Cannery Manufacturing
+        [Name("Show Cannery Manufacturing")]
+        //[Description("Clothing")]
+        public bool cannery_enabled = false;
+
+
+        [Name("     Cooking Pot")]
+        [Description("The default location is at the Forge.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int cookingpotLocationIndex = 2;
+
+        [Name("     Firelog")]
+        [Description("The default location is at the Ammo Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int firelogLocationIndex = 1;
+
+        [Name("     Hatchet")]
+        [Description("The default location is at the Ammo Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int hatchetLocationIndex = 3;
+
+        [Name("     Knife")]
+        [Description("The default location is at the Ammo Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int knifeLocationIndex = 3;
+
+        [Name("     Scrap Metal")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int scrapmetalLocationIndex = 2;
+
+
+        // Dead Air
+        [Name("Show Dead Air")]
+        //[Description("Clothing")]
+        public bool deadair_enabled = false;
+
+
+        [Name("     Improvised Filter")]
+        [Description("The default location is at the Forge.")]
+        [Choice("Anywhere", "Workbench", "Forge", "Ammo Workbench", "Fire")]
+        public int improvisedfilterLocationIndex = 2;
+
+
+        // Useful Blueprints
+        [Name("Show Useful Blueprints")]
+        //[Description("Clothing")]
+        public bool usefulblueprints_enabled = false;
+
+
+        [Name("     Wood Matches")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int woodmatchesLocationIndex = 1;
+
+        [Name("     Sewing Kit")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int sewingkitLocationIndex = 1;
+
+        [Name("     Woodwright's Bow")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int bowwoodwrightsLocationIndex = 1;
+
+        [Name("     Rope")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int ropeLocationIndex = 1;
+
+        [Name("     Salt Bag")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int saltbagLocationIndex = 1;
+
+        [Name("     Whetstone")]
+        [Description("The default location is at the Workbench.")]
+        [Choice("Anywhere", "Workbench")]
+        public int sharpeningstoneLocationIndex = 1;
 
 
 
@@ -366,6 +477,44 @@ namespace CraftAnywhereRedux
             this.SetFieldVisible(GetType().GetField("wolfskincapLocationIndex"), visible);
         }
 
+
+        protected void SetAmmoToolsVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("emptyshellcasingLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("flaregunammosingleLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("magnesiumLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("riflecleaningkitLocationIndex"), visible);
+        }
+
+
+        protected void SetCanneryVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("cookingpotLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("firelogLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("hatchetLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("knifeLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("scrapmetalLocationIndex"), visible);
+        }
+
+
+        protected void SetDeadAirVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("improvisedfilterLocationIndex"), visible);
+        }
+
+
+
+        protected void SetUsefulBlueprintsVisibility(bool visible)
+        {
+            this.SetFieldVisible(GetType().GetField("woodmatchesLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("sewingkitLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("bowwoodwrightsLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("ropeLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("saltbagLocationIndex"), visible);
+            this.SetFieldVisible(GetType().GetField("sharpeningstoneLocationIndex"), visible);
+        }
+
+
         internal void UpdateVisibility()
         {
             SetToolsVisibility(tools_enabled);
@@ -373,6 +522,10 @@ namespace CraftAnywhereRedux
             SetWolfscarfVisibility(wolfscarf_enabled);
             SetLeatherworksVisibility(leatherworks_enabled);
             SetNorthfolkVisibility(northfolk_enabled);
+            SetAmmoToolsVisibility(ammotools_enabled);
+            SetCanneryVisibility(cannery_enabled);
+            SetDeadAirVisibility(deadair_enabled);
+            SetUsefulBlueprintsVisibility(usefulblueprints_enabled);
         }
 
 
@@ -386,7 +539,10 @@ namespace CraftAnywhereRedux
             else if (field.Name == "wolfscarf_enabled") SetWolfscarfVisibility((bool)newValue);
             else if (field.Name == "leatherworks_enabled") SetLeatherworksVisibility((bool)newValue);
             else if (field.Name == "northfolk_enabled") SetNorthfolkVisibility((bool)newValue);
-
+            else if (field.Name == "ammotools_enabled") SetAmmoToolsVisibility((bool)newValue);
+            else if (field.Name == "cannery_enabled") SetCanneryVisibility((bool)newValue);
+            else if (field.Name == "deadair_enabled") SetDeadAirVisibility((bool)newValue);
+            else if (field.Name == "usefulblueprints_enabled") SetUsefulBlueprintsVisibility((bool)newValue);
         }
 
 
