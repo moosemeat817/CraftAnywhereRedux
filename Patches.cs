@@ -205,23 +205,23 @@ namespace CraftAnywhereRedux
 
 
                     // Northfolk
-                    else if (name == "BearskinLeggings")
+                    else if (name == "BearskinLeggings_MOD")
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.bearskinleggingsLocationIndex;
                     }
-                    else if (name == "DeerskinCoat")
+                    else if (name == "DeerskinCoat_MOD")
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.deerskincoatLocationIndex;
                     }
-                    else if (name == "DeerskinGloves")
+                    else if (name == "DeerskinGloves_MOD")
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.deerskinglovesLocationIndex;
                     }
-                    else if (name == "WolfskinBoots")
+                    else if (name == "WolfskinBoots_MOD")
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.wolfskinbootsLocationIndex;
                     }
-                    else if (name == "WolfskinCap")
+                    else if (name == "WolfskinCap_MOD")
                     {
                         bpi.m_RequiredCraftingLocation = (CraftingLocation)Settings.options.wolfskincapLocationIndex;
                     }
