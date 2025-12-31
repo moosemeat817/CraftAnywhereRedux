@@ -5,17 +5,15 @@ using Il2CppInterop;
 using Il2CppInterop.Runtime.Injection; 
 using System.Collections;
 using Il2CppTLD.Gear;
-using ComplexLogger;
 
 namespace CraftAnywhereRedux
 {
 	public class CraftAnywhereReduxMain : MelonMod
 	{
 
-        internal static ComplexLogger<CraftAnywhereReduxMain> Logger = new();
         public override void OnInitializeMelon()
 		{
-            Logger.Log("CraftAnywhere is online.", FlaggedLoggingLevel.None);
+            MelonLogger.Msg("CraftAnywhere is online.");
             Settings.OnLoad();          
         }
         
